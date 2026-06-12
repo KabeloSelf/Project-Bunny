@@ -52,7 +52,7 @@ function placeOrder() {
     return;
   }
 
-  let orderText = `Hello Bra Love's Kota! 🍞\n\n`;
+  let orderText = `Hello Bra Love's Kota! \n\n`;
   orderText += `*New Order*\n`;
   orderText += `Name: ${name}\n`;
   orderText += `Phone: ${phone}\n`;
