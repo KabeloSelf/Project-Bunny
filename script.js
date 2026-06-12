@@ -7,6 +7,15 @@ function addToCart(name, price) {
   } else {
     cart.push({ name, price: parseFloat(price), qty: 1 });
   }
+
+  updateCart();
+}
+function removeFromCart(index) {
+  if (cart[index].qty > 1) {
+    cart[index].qty--;
+  } else {
+    cart.splice(index, 1);
+  }
   updateCart();
 }
 
@@ -16,9 +25,10 @@ function updateCart() {
   cartItems.innerHTML = '';
 
   let total = 0;
-  cart.forEach(item => {
+  cart.forEach((item , index)=> {
     const li = document.createElement('li');
-    li.innerHTML = `<span>${item.name} x${item.qty}</span><span>R${(item.price * item.qty).toFixed(2)}</span>`;
+    li.innerHTML = `<span>${item.name} x${item.qty}</span><span>R${(item.price * item.qty).toFixed(2)}
+     <button onclick="removeFromCart(${index})">❌</button></span>`;
     cartItems.appendChild(li);
     total += item.price * item.qty;
   });
