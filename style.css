@@ -66,7 +66,7 @@ nav ul li a:hover {
   background: #c1121f;
 }
 
-/* HERO */
+
 #home {
   height: 100vh;
   background: url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1400') center/cover no-repeat;
@@ -155,7 +155,7 @@ nav ul li a:hover {
   color: #000;
 }
 
-/* SPECIAL BANNER */
+
 .special-banner {
   background: #e63946;
   color: #fff;
@@ -164,7 +164,7 @@ nav ul li a:hover {
   font-size: 15px;
 }
 
-/* SECTIONS */
+
 section {
   padding: 80px 60px;
   max-width: 1200px;
@@ -191,7 +191,7 @@ section {
   font-size: 16px;
 }
 
-/* MENU */
+
 .menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
