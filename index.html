@@ -1,64 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bra Love's Kota</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-            </ul>
-        </nav>
-         <section id="home">
-           <h1>Bra Love's Kota</h1>
-           <p1>Fresh. Loaded. Affordable</p1>
-         <button>View Menu</button>
-        </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bra Love's Kota</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <section id="menu">
-            <h2>Our Kota Menu</h2>
-            <div class="menu-container">
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" width=100 height=80>
-                    <h3>Classic Kota</h3>
-                    <p>Lengola, Atchaar, Chips, Polony</p>
-                    <span>R14</span>
-                    <button class="order-btn" data-name="Classic Kota" data-price="14">Add Item</button>
-                        
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" width=100 height=100>
-                    <h3>Cheesy Kota</h3>
-                    <p>Lengola, Atchaar, Chips, Polony,Cheese</p>
-                    <span>R16</span>
-                    <button class="order-btn" data-name="Cheesy Kota" data-price="16">Add Item</button>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" width="120" height="100">
-                    <h3>Pork Special Kota</h3>
-                    <p>Lengola, Atchaar, Chips, Polony, Special</p>
-                    <span>R18,50</span>
-                    <button class="order-btn" data-name="Pork Special Kota" data-price="18,50">Add menu-item</button>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" width=100 height=80>
-                    <h3>Egg Kota</h3>
-                    <p>Lengola, Atchaar, Chips, Special, Egg</p>
-                    <span>R22</span>
-                    <button class="order-btn" data-name="Egg Kota" data-price="22">Add Item</button>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" width=100 height=100>
-                    <h3>Russian Kota</h3>
-                    <p>Lengolaa, Atchaar, Chips, Polony, Russian</p>
-                    <span>R24</span>
-                    <button class="order-btn" data-name="Russian Kota" data-price="24">Add Item</button>
-                </div>
-            </div>
-            <button id="buildBtn">Build Your Kota</button>
-        </section>
-    </body>
+  
+  <nav>
+    <div class="nav-logo">Bra Love's <span>Kota</span></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#order" class="nav-btn">Order Now</a>
+  </nav>
+
+  
+  <section id="home">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <p class="hero-tag">🔥 Kasi's Finest</p>
+        <h1>Bra Love's <span>Kota</span></h1>
+        <p class="hero-sub">Fresh. Loaded. Affordable.</p>
+        <div class="hero-btns">
+          <a href="#menu" class="btn-primary">View Menu</a>
+          <a href="#order" class="btn-outline">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="special-banner">
+    🎉 <strong>Daily Special:</strong> Russian Kota + Cooldrink for only <strong>R28!</strong> — Today Only!
+  </div>
+
+  
+  <section id="menu">
+    <div class="section-header">
+      <h2>Our <span>Menu</span></h2>
+      <p>All kotas made fresh to order</p>
+    </div>
+    <div class="menu-container">
+
+      <div class="menu-item">
+        <div class="menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Classic Kota">
+          <span class="badge">Popular</span>
+        </div>
+        <div class="menu-info">
+          <h3>Classic Kota</h3>
+          <p>Lengola, Atchaar, Chips, Polony</p>
+          <div class="menu-footer">
+            <span class="price">R14</span>
+            <button class="order-btn" data-name="Classic Kota" data-price="14">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Cheesy Kota">
+        </div>
+        <div class="menu-info">
+          <h3>Cheesy Kota</h3>
+          <p>Lengola, Atchaar, Chips, Polony, Cheese</p>
+          <div class="menu-footer">
+            <span class="price">R16</span>
+            <button class="order-btn" data-name="Cheesy Kota" data-price="16">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pork Special Kota">
+        </div>
+        <div class="menu-info">
+          <h3>Pork Special Kota</h3>
+          <p>Lengola, Atchaar, Chips, Polony, Special</p>
+          <div class="menu-footer">
+            <span class="price">R18.50</span>
+            <button class="order-btn" data-name="Pork Special Kota" data-price="18.50">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Egg Kota">
+        </div>
+        <div class="menu-info">
+          <h3>Egg Kota</h3>
+          <p>Lengola, Atchaar, Chips, Special, Egg</p>
+          <div class="menu-footer">
+            <span class="price">R22</span>
+            <button class="order-btn" data-name="Egg Kota" data-price="22">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-img-wrap">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Russian Kota">
+          <span class="badge hot">🌶 Hot Pick</span>
+        </div>
+        <div class="menu-info">
+          <h3>Russian Kota</h3>
+          <p>Lengola, Atchaar, Chips, Polony, Russian</p>
+          <div class="menu-footer">
+            <span class="price">R24</span>
+            <button class="order-btn" data-name="Russian Kota" data-price="24">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section id="order">
+    <div class="section-header">
+      <h2>Place Your <span>Order</span></h2>
+      <p>Fill in your details and we'll get it ready</p>
+    </div>
+
+    
+    <div class="cart" id="cart">
+      <h3>🛒 Your Order</h3>
+      <ul id="cart-items"></ul>
+      <div class="cart-total">Total: <span id="cart-total">R0</span></div>
+    </div>
+
+    <div class="order-form">
+      <input type="text" id="customer-name" placeholder="Your Name" />
+      <input type="tel" id="customer-phone" placeholder="Your Phone Number" />
+      <div class="order-type">
+        <label><input type="radio" name="order-type" value="Collection" checked> Collection</label>
+        <label><input type="radio" name="order-type" value="Delivery"> Delivery</label>
+      </div>
+      <div class="pay-type">
+        <label><input type="radio" name="pay-type" value="Cash" checked> Cash</label>
+        <label><input type="radio" name="pay-type" value="Online"> Online Payment</label>
+      </div>
+      <button class="btn-primary full" onclick="placeOrder()">Place Order via WhatsApp 📲</button>
+    </div>
+  </section>
+
+  
+  <section id="contact">
+    <div class="section-header">
+      <h2>Find <span>Us</span></h2>
+    </div>
+    <div class="contact-info">
+      <div class="contact-card">
+        <span>📍</span>
+        <p>Vaal, Gauteng</p>
+      </div>
+      <div class="contact-card">
+        <span>⏰</span>
+        <p>Mon–Sun: 7am – 8pm</p>
+      </div>
+      <div class="contact-card">
+        <span>📞</span>
+        <p>+27 00 000 0000</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2026 Bra Love's Kota. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
