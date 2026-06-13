@@ -432,3 +432,22 @@ footer {
     padding: 60px 20px;
   }
 }
+.side-items{
+  background:black;
+  padding:15px;
+  border-radius:15px;
+  color:white;
+  margin:auto;
+  max-width:500px;
+}
+.kota-sides{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:15px;
+  margin:20px 0;
+}
+.kota-sides label{
+  padding:15px;
+  border-radius:10px;
+  cursor: pointer;
+}
