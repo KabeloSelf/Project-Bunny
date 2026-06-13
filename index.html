@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  
   <nav>
     <div class="nav-logo">Bra Love's <span>Kota</span></div>
     <ul>
@@ -21,11 +20,10 @@
     <a href="#order" class="nav-btn">Order Now</a>
   </nav>
 
-  
   <section id="home">
     <div class="hero-overlay">
       <div class="hero-content">
-        <p class="hero-tag"> Kasi's Finest</p>
+        <p class="hero-tag">Kasi's Finest</p>
         <h1>Bra Love's <span>Kota</span></h1>
         <p class="hero-sub">Fresh. Loaded. Affordable.</p>
         <div class="hero-btns">
@@ -36,12 +34,10 @@
     </div>
   </section>
 
-  
   <div class="special-banner">
-     <strong>Daily Special:</strong> Russian Kota + Cooldrink for only <strong>R28!</strong> — Today Only!
+    <strong>Daily Special:</strong> Russian Kota + Cooldrink for only <strong>R28!</strong> — Today Only!
   </div>
 
-  
   <section id="menu">
     <div class="section-header">
       <h2>Our <span>Menu</span></h2>
@@ -145,7 +141,7 @@
           <input type="checkbox" value="5" class="option">
           Cheese (+5)
         </label>
-        <label >
+        <label>
           <input type="checkbox" value="8" class="option">
           Vienna (+9)
         </label>
@@ -154,54 +150,58 @@
           Special (+4)
         </label>
       </div>
+
       <div class="menu-item">
         <div class="category">
           <h3>Fries</h3>
         </div>
         <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGwlMjBmcmllc3xlbnwwfHwwfHx8MA%3D%3D" alt="PSmall Fries">
+          <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&auto=format&fit=crop&q=60" alt="Small Fries">
         </div>
         <div class="fries-menu">
           <h3>Small Fries</h3>
           <div class="menu-footer">
             <span class="price">R15</span>
-            <button class="order-btn" data-name="Small Fries" data-price="R15">+ Add</button>
+            <button class="order-btn" data-name="Small Fries" data-price="15">+ Add</button>
           </div>
         </div>
       </div>
+
       <div class="menu-item">
         <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c21hbGwlMjBmcmllc3xlbnwwfHwwfHx8MA%3D%3D" alt="Medium Fries">
+          <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=600&auto=format&fit=crop&q=60" alt="Medium Fries">
         </div>
         <div class="fries-menu">
           <h3>Medium Fries</h3>
           <div class="menu-footer">
             <span class="price">R20</span>
-            <button class="order-btn" data-name="Medium Fries" data-price="R20">+ Add</button>
+            <button class="order-btn" data-name="Medium Fries" data-price="20">+ Add</button>
           </div>
         </div>
       </div>
+
       <div class="menu-item">
         <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c21hbGwlMjBmcmllc3xlbnwwfHwwfHx8MA%3D%3D" alt="Large Fries">
+          <img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=600&auto=format&fit=crop&q=60" alt="Large Fries">
         </div>
         <div class="fries-menu">
           <h3>Large Fries</h3>
           <div class="menu-footer">
             <span class="price">R25</span>
-            <button class="order-btn" data-name="Large Fries" data-price="R25">+ Add</button>
+            <button class="order-btn" data-name="Large Fries" data-price="25">+ Add</button>
           </div>
         </div>
       </div>
-     
+
+    </div>
   </section>
+
   <section id="order">
     <div class="section-header">
       <h2>Place Your <span>Order</span></h2>
       <p>Fill in your details and we'll get it ready</p>
     </div>
 
-    
     <div class="cart" id="cart">
       <h3>Your Order</h3>
       <ul id="cart-items"></ul>
@@ -210,7 +210,7 @@
 
     <div class="order-form">
       <input type="text" id="customer-name" placeholder="Your Name" />
-      <input type="tel" id="customer-phone" placeholder="Your Phone Number" />
+      <input type="tel" id="customer-phone" placeholder="Your Phone Number (e.g. 0821234567)" />
       <div class="order-type">
         <label><input type="radio" name="order-type" value="Collection" checked> Collection</label>
         <label><input type="radio" name="order-type" value="Delivery"> Delivery</label>
@@ -219,32 +219,30 @@
         <label><input type="radio" name="pay-type" value="Cash" checked> Cash</label>
         <label><input type="radio" name="pay-type" value="Online"> Online Payment</label>
       </div>
-      <button class="btn-primary full" onclick="placeOrder()">Place Order via WhatsApp </button>
+      <button id="place-order-btn" class="btn-primary full" onclick="placeOrder()">Place Order</button>
     </div>
   </section>
 
-  
   <section id="contact">
     <div class="section-header">
       <h2>Find <span>Us</span></h2>
     </div>
     <div class="contact-info">
       <div class="contact-card">
-        <span> </span>
+        <span></span>
         <p>Vaal, Gauteng</p>
       </div>
       <div class="contact-card">
-        <span> </span>
+        <span></span>
         <p>Mon - Sun: 7am - 8pm</p>
       </div>
       <div class="contact-card">
-        <span> </span>
+        <span></span>
         <p>+27 00 000 0000</p>
       </div>
     </div>
   </section>
 
-  
   <footer>
     <p>© 2026 Bra Love's Kota. All rights reserved.</p>
   </footer>

@@ -10,6 +10,7 @@ function addToCart(name, price) {
 
   updateCart();
 }
+
 function removeFromCart(index) {
   if (cart[index].qty > 1) {
     cart[index].qty--;
@@ -25,7 +26,7 @@ function updateCart() {
   cartItems.innerHTML = '';
 
   let total = 0;
-  cart.forEach((item , index)=> {
+  cart.forEach((item, index) => {
     const li = document.createElement('li');
     li.innerHTML = `<span>${item.name} x${item.qty}</span><span>R${(item.price * item.qty).toFixed(2)}
      <button onclick="removeFromCart(${index})">❌</button></span>`;
@@ -62,23 +63,55 @@ function placeOrder() {
     return;
   }
 
-  let orderText = `Hello Bra Love's Kota! \n\n`;
-  orderText += `*New Order*\n`;
-  orderText += `Name: ${name}\n`;
-  orderText += `Phone: ${phone}\n`;
-  orderText += `Type: ${orderType}\n`;
-  orderText += `Payment: ${payType}\n\n`;
-  orderText += `*Items:*\n`;
-
   let total = 0;
   cart.forEach(item => {
-    orderText += `- ${item.name} x${item.qty} = R${(item.price * item.qty).toFixed(2)}\n`;
     total += item.price * item.qty;
   });
 
-  orderText += `\n*Total: R${total.toFixed(2)}*`;
+  // Format phone number — ensure it starts with +27
+  let formattedPhone = phone.replace(/\s+/g, '');
+  if (formattedPhone.startsWith('0')) {
+    formattedPhone = '+27' + formattedPhone.slice(1);
+  } else if (!formattedPhone.startsWith('+')) {
+    formattedPhone = '+27' + formattedPhone;
+  }
 
-  const whatsappNumber = '27000000000';
-  const encoded = encodeURIComponent(orderText);
-  window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, '_blank');
+  const orderPayload = {
+    name,
+    phone: formattedPhone,
+    orderType,
+    payType,
+    cart,
+    total: total.toFixed(2),
+  };
+
+  // Disable button to prevent double orders
+  const btn = document.getElementById('place-order-btn');
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+  }
+
+  fetch('/api/send-sms', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(orderPayload),
+  })
+    .then(res => res.json())
+    .then(() => {
+      alert('✅ Order placed! You and the shop will receive an SMS shortly.');
+      cart = [];
+      updateCart();
+      document.getElementById('customer-name').value = '';
+      document.getElementById('customer-phone').value = '';
+    })
+    .catch(() => {
+      alert('⚠️ Order could not be sent. Please call the shop directly.');
+    })
+    .finally(() => {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Place Order';
+      }
+    });
 }
