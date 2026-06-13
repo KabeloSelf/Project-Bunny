@@ -10,25 +10,28 @@ export default async function handler(req, res) {
 
   const { name, phone, orderType, payType, cart, total } = req.body;
 
-  
   const items = cart.map(i => `${i.name} x${i.qty} = R${(i.price * i.qty).toFixed(2)}`).join('\n');
 
-  const ownerMessage = `🛍 New Order!\nName: ${name}\nPhone: ${phone}\nType: ${orderType}\nPayment: ${payType}\nItems:\n${items}\nTotal: R${total}`;
-  const customerMessage = `Hi ${name}! ✅ Your order at Bra Love's Kota has been received.\nTotal: R${total}\nWe'll get it ready soon!`;
+  const ownerMessage = `New Order!\nName: ${name}\nPhone: ${phone}\nType: ${orderType}\nPayment: ${payType}\nItems:\n${items}\nTotal: R${total}`;
+  const customerMessage = `Hi ${name}! Your order at Bra Love's Kota has been received.\nTotal: R${total}\nWe'll get it ready soon!`;
+
+  const ownerNumbers = process.env.OWNER_PHONE_NUMBER.split(',').map(n => n.trim());
 
   try {
-    
-    await client.messages.create({
-      body: ownerMessage,
-      from: process.env.TWILIO_PHONE_NUMBER,
-      to: process.env.OWNER_PHONE_NUMBER,
-    });
+    await Promise.all(
+      ownerNumbers.map(number =>
+        client.messages.create({
+          body: ownerMessage,
+          from: process.env.TWILIO_PHONE_NUMBER,
+          to: number,
+        })
+      )
+    );
 
-   
     await client.messages.create({
       body: customerMessage,
       from: process.env.TWILIO_PHONE_NUMBER,
-      to: phone, 
+      to: phone,
     });
 
     res.status(200).json({ success: true });
