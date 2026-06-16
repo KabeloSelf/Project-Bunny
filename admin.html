@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo"><strong>Bra Love's </strong><span>Admin</span></div>
+
+    <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#orders">Orders</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#customers">Customers</a></li>
+    </ul>
+</nav>
+
+<div class="main">
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Total Orders</h3>
+            <p id="total-orders">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Revenue</h3>
+            <p id="total-revenue">R0.00</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <p id="pending-orders">0</p>
+        </div>
+
+    </div>
+
+    <div class="orders">
+        <h2>Recent Orders</h2>
+
+        <table>
+            <tr>
+                <th>Order #</th>
+                <th>Customer</th>
+                <th>Item</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
