@@ -1,5 +1,16 @@
 let cart = [];
 
+function showCategory(category) {
+  document.querySelectorAll('.category-panel').forEach(panel => {
+    panel.classList.remove('active');
+  });
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.getElementById('cat-' + category).classList.add('active');
+  event.target.classList.add('active');
+}
+
 function addToCart(name, price) {
   const existing = cart.find(item => item.name === name);
   if (existing) {
@@ -7,7 +18,6 @@ function addToCart(name, price) {
   } else {
     cart.push({ name, price: parseFloat(price), qty: 1 });
   }
-
   updateCart();
 }
 
@@ -29,7 +39,7 @@ function updateCart() {
   cart.forEach((item, index) => {
     const li = document.createElement('li');
     li.innerHTML = `<span>${item.name} x${item.qty}</span><span>R${(item.price * item.qty).toFixed(2)}
-     <button onclick="removeFromCart(${index})">❌</button></span>`;
+     <button onclick="removeFromCart(${index})">X</button></span>`;
     cartItems.appendChild(li);
     total += item.price * item.qty;
   });
@@ -37,14 +47,15 @@ function updateCart() {
   cartTotal.textContent = `R${total.toFixed(2)}`;
 }
 
-document.querySelectorAll('.order-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('order-btn')) {
+    const btn = e.target;
     const name = btn.dataset.name;
     const price = btn.dataset.price;
     addToCart(name, price);
-    btn.textContent = '✓ Added';
+    btn.textContent = 'Added';
     setTimeout(() => btn.textContent = '+ Add', 1000);
-  });
+  }
 });
 
 function placeOrder() {
@@ -68,7 +79,6 @@ function placeOrder() {
     total += item.price * item.qty;
   });
 
-  // Format phone number — ensure it starts with +27
   let formattedPhone = phone.replace(/\s+/g, '');
   if (formattedPhone.startsWith('0')) {
     formattedPhone = '+27' + formattedPhone.slice(1);
@@ -85,7 +95,6 @@ function placeOrder() {
     total: total.toFixed(2),
   };
 
-  // Disable button to prevent double orders
   const btn = document.getElementById('place-order-btn');
   if (btn) {
     btn.disabled = true;
@@ -99,14 +108,14 @@ function placeOrder() {
   })
     .then(res => res.json())
     .then(() => {
-      alert('✅ Order placed! You and the shop will receive an SMS shortly.');
+      alert('Order placed! You and the shop will receive an SMS shortly.');
       cart = [];
       updateCart();
       document.getElementById('customer-name').value = '';
       document.getElementById('customer-phone').value = '';
     })
     .catch(() => {
-      alert('⚠️ Order could not be sent. Please call the shop directly.');
+      alert('Order could not be sent. Please call the shop directly.');
     })
     .finally(() => {
       if (btn) {

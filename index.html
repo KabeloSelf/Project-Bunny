@@ -43,157 +43,249 @@
       <h2>Our <span>Menu</span></h2>
       <p>All kotas made fresh to order</p>
     </div>
-    <div class="menu-container">
 
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Classic Kota">
-          <span class="badge">Popular</span>
-        </div>
-        <div class="menu-info">
-          <h3>Classic Kota</h3>
-          <p>Lengola, Atchaar, Chips, Polony</p>
-          <div class="menu-footer">
-            <span class="price">R14</span>
-            <button class="order-btn" data-name="Classic Kota" data-price="14">+ Add</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Cheesy Kota">
-        </div>
-        <div class="menu-info">
-          <h3>Cheesy Kota</h3>
-          <p>Lengola, Atchaar, Chips, Polony, Cheese</p>
-          <div class="menu-footer">
-            <span class="price">R16</span>
-            <button class="order-btn" data-name="Cheesy Kota" data-price="16">+ Add</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pork Special Kota">
-        </div>
-        <div class="menu-info">
-          <h3>Pork Special Kota</h3>
-          <p>Lengola, Atchaar, Chips, Polony, Special</p>
-          <div class="menu-footer">
-            <span class="price">R18.50</span>
-            <button class="order-btn" data-name="Pork Special Kota" data-price="18.50">+ Add</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Egg Kota">
-        </div>
-        <div class="menu-info">
-          <h3>Egg Kota</h3>
-          <p>Lengola, Atchaar, Chips, Special, Egg</p>
-          <div class="menu-footer">
-            <span class="price">R22</span>
-            <button class="order-btn" data-name="Egg Kota" data-price="22">+ Add</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Russian Kota">
-          <span class="badge hot">Hot Pick</span>
-        </div>
-        <div class="menu-info">
-          <h3>Russian Kota</h3>
-          <p>Lengola, Atchaar, Chips, Polony, Russian</p>
-          <div class="menu-footer">
-            <span class="price">R24</span>
-            <button class="order-btn" data-name="Russian Kota" data-price="24">+ Add</button>
-          </div>
-        </div>
-      </div>
-
+    <div class="category-tabs">
+      <button class="tab-btn active" onclick="showCategory('kotas')">Kotas</button>
+      <button class="tab-btn" onclick="showCategory('chips')">Chips</button>
+      <button class="tab-btn" onclick="showCategory('drinks')">Drinks</button>
+      <button class="tab-btn" onclick="showCategory('extras')">Extras</button>
     </div>
-  </section>
 
-  <section id="menu-categories">
-    <div class="section-header">
-      <h2>Our <span>Sides</span></h2>
+    <div class="category-panel active" id="cat-kotas">
+      <div class="menu-container">
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Classic Kota">
+            <span class="badge">Popular</span>
+          </div>
+          <div class="menu-info">
+            <h3>Classic Kota</h3>
+            <p>Lengola, Atchaar, Chips, Polony</p>
+            <div class="menu-footer">
+              <span class="price">R14</span>
+              <button class="order-btn" data-name="Classic Kota" data-price="14">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Cheesy Kota">
+          </div>
+          <div class="menu-info">
+            <h3>Cheesy Kota</h3>
+            <p>Lengola, Atchaar, Chips, Polony, Cheese</p>
+            <div class="menu-footer">
+              <span class="price">R16</span>
+              <button class="order-btn" data-name="Cheesy Kota" data-price="16">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pork Special Kota">
+          </div>
+          <div class="menu-info">
+            <h3>Pork Special Kota</h3>
+            <p>Lengola, Atchaar, Chips, Polony, Special</p>
+            <div class="menu-footer">
+              <span class="price">R18.50</span>
+              <button class="order-btn" data-name="Pork Special Kota" data-price="18.50">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Egg Kota">
+          </div>
+          <div class="menu-info">
+            <h3>Egg Kota</h3>
+            <p>Lengola, Atchaar, Chips, Special, Egg</p>
+            <div class="menu-footer">
+              <span class="price">R22</span>
+              <button class="order-btn" data-name="Egg Kota" data-price="22">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Russian Kota">
+            <span class="badge hot">Hot Pick</span>
+          </div>
+          <div class="menu-info">
+            <h3>Russian Kota</h3>
+            <p>Lengola, Atchaar, Chips, Polony, Russian</p>
+            <div class="menu-footer">
+              <span class="price">R24</span>
+              <button class="order-btn" data-name="Russian Kota" data-price="24">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="side-items">
-      <div class="category">
-        <h3>Kota Sides</h3>
-      </div>
-      <div class="kota-sides">
-        <label>
-          <input type="checkbox" value="3" class="option">
-          Polony (+3)
-        </label>
-        <label>
-          <input type="checkbox" value="9" class="option">
-          Russian (+9)
-        </label>
-        <label>
-          <input type="checkbox" value="5" class="option">
-          Cheese (+5)
-        </label>
-        <label>
-          <input type="checkbox" value="8" class="option">
-          Vienna (+9)
-        </label>
-        <label>
-          <input type="checkbox" value="4" class="option">
-          Special (+4)
-        </label>
-      </div>
 
-      <div class="menu-item">
-        <div class="category">
-          <h3>Fries</h3>
-        </div>
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&auto=format&fit=crop&q=60" alt="Small Fries">
-        </div>
-        <div class="fries-menu">
-          <h3>Small Fries</h3>
-          <div class="menu-footer">
-            <span class="price">R15</span>
-            <button class="order-btn" data-name="Small Fries" data-price="15">+ Add</button>
+    <div class="category-panel" id="cat-chips">
+      <div class="menu-container">
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400" alt="Small Chips">
+          </div>
+          <div class="menu-info">
+            <h3>Small Chips</h3>
+            <p>Crispy salted chips, small portion</p>
+            <div class="menu-footer">
+              <span class="price">R15</span>
+              <button class="order-btn" data-name="Small Chips" data-price="15">+ Add</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=600&auto=format&fit=crop&q=60" alt="Medium Fries">
-        </div>
-        <div class="fries-menu">
-          <h3>Medium Fries</h3>
-          <div class="menu-footer">
-            <span class="price">R20</span>
-            <button class="order-btn" data-name="Medium Fries" data-price="20">+ Add</button>
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=400" alt="Medium Chips">
+          </div>
+          <div class="menu-info">
+            <h3>Medium Chips</h3>
+            <p>Crispy salted chips, medium portion</p>
+            <div class="menu-footer">
+              <span class="price">R20</span>
+              <button class="order-btn" data-name="Medium Chips" data-price="20">+ Add</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="menu-item">
-        <div class="menu-img-wrap">
-          <img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=600&auto=format&fit=crop&q=60" alt="Large Fries">
-        </div>
-        <div class="fries-menu">
-          <h3>Large Fries</h3>
-          <div class="menu-footer">
-            <span class="price">R25</span>
-            <button class="order-btn" data-name="Large Fries" data-price="25">+ Add</button>
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=400" alt="Large Chips">
+          </div>
+          <div class="menu-info">
+            <h3>Large Chips</h3>
+            <p>Crispy salted chips, large portion</p>
+            <div class="menu-footer">
+              <span class="price">R25</span>
+              <button class="order-btn" data-name="Large Chips" data-price="25">+ Add</button>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
+
+    <div class="category-panel" id="cat-drinks">
+      <div class="menu-container">
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" alt="Cooldrink Can">
+          </div>
+          <div class="menu-info">
+            <h3>Cooldrink Can</h3>
+            <p>Coke, Fanta, Sprite — your choice</p>
+            <div class="menu-footer">
+              <span class="price">R10</span>
+              <button class="order-btn" data-name="Cooldrink Can" data-price="10">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=400" alt="Juice">
+          </div>
+          <div class="menu-info">
+            <h3>Juice</h3>
+            <p>Assorted fruit juice, 500ml</p>
+            <div class="menu-footer">
+              <span class="price">R12</span>
+              <button class="order-btn" data-name="Juice" data-price="12">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-wrap">
+            <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400" alt="Water">
+          </div>
+          <div class="menu-info">
+            <h3>Water</h3>
+            <p>Still water, 500ml</p>
+            <div class="menu-footer">
+              <span class="price">R8</span>
+              <button class="order-btn" data-name="Water" data-price="8">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="category-panel" id="cat-extras">
+      <div class="menu-container">
+
+        <div class="menu-item">
+          <div class="menu-info">
+            <h3>Polony</h3>
+            <p>Add extra polony to your order</p>
+            <div class="menu-footer">
+              <span class="price">+R3</span>
+              <button class="order-btn" data-name="Extra Polony" data-price="3">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-info">
+            <h3>Russian</h3>
+            <p>Add a Russian to your order</p>
+            <div class="menu-footer">
+              <span class="price">+R9</span>
+              <button class="order-btn" data-name="Extra Russian" data-price="9">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-info">
+            <h3>Cheese</h3>
+            <p>Add cheese to your order</p>
+            <div class="menu-footer">
+              <span class="price">+R5</span>
+              <button class="order-btn" data-name="Extra Cheese" data-price="5">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-info">
+            <h3>Vienna</h3>
+            <p>Add a Vienna to your order</p>
+            <div class="menu-footer">
+              <span class="price">+R9</span>
+              <button class="order-btn" data-name="Extra Vienna" data-price="9">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-info">
+            <h3>Special</h3>
+            <p>Add Special to your order</p>
+            <div class="menu-footer">
+              <span class="price">+R4</span>
+              <button class="order-btn" data-name="Extra Special" data-price="4">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </section>
 
   <section id="order">

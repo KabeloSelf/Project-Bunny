@@ -192,6 +192,47 @@ section {
 }
 
 
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: #161616;
+  color: #aaa;
+  border: 1px solid #333;
+  padding: 10px 28px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Poppins', Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-btn:hover {
+  border-color: #e63946;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: #e63946;
+  color: #fff;
+  border-color: #e63946;
+}
+
+.category-panel {
+  display: none;
+}
+
+.category-panel.active {
+  display: block;
+}
+
+
 .menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -431,23 +472,11 @@ footer {
   #order {
     padding: 60px 20px;
   }
-}
-.side-items{
-  background:black;
-  padding:15px;
-  border-radius:15px;
-  color:white;
-  margin:auto;
-  max-width:500px;
-}
-.kota-sides{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
-  gap:15px;
-  margin:20px 0;
-}
-.kota-sides label{
-  padding:15px;
-  border-radius:10px;
-  cursor: pointer;
+  .category-tabs {
+    gap: 8px;
+  }
+  .tab-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
 }
