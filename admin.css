@@ -123,3 +123,58 @@ nav ul {
   color: #ccc;
   border-bottom: 1px solid #222;
 }
+.menu-management{
+    background:#161616;
+    border:1px solid #222;
+    border-radius:14px;
+    padding:25px;
+    margin-top:30px;
+}
+.menu-management h2{
+    margin-bottom:20px;
+}
+.menu-form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+.menu-form input{
+    padding:12px;
+    background:#0a0a0a;
+    border:1px solid #333;
+    border-radius:10px;
+    color:white;
+}
+.add-btn{
+    background: #e63946;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight: 600px;
+}
+.edit-btn{
+    background: #2196f3;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.delete-btn{
+     background: #e63946;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.menu-management th,.menu-management td{
+    padding:15px;
+    border-bottom:1px solid #222;
+    text-align: left;
+}
+.menu-management th{
+    color:#e63946;
+}
