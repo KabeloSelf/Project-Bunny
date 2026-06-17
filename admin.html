@@ -50,21 +50,46 @@
                 <th>Item</th>
                 <th>Total</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr>
-
         </table>
+        <tbody id="orders-table-body">
+
+        </tbody>
     </div>
+</div>
+<div class="ready-orders">
+    <h2>Orders ready for collection</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Order #</th>
+                <th>Customer</th>
+                <th>Phone</th>
+                <th>Item</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="ready-order-body">
+        </tbody>
+          <p class="empty-state" id="no-ready-orders">
+             No orders ready for collection.
+    </table>
+</div>
 
 </div>
 <div class="menu-management">
-    <h2>Menu Management</h2>
+    <h1 id="header">Menu Management</h1>
+    <h2>Add New Menu Items</h2>
     <div class="menu-form">
         <input type="text" id="item-name" placeholder="Item Name">
         <input type="number" id="item-price" placeholder="Price">
         <input type="text" id="item-description" placeholder="Description">
+        <input type="file" id="item-image" accept="image/*">
         <button class="add-btn">Add Item</button>
     </div>
     <table>
+        <h2>Kota</h2>
         <thead>
             <tr>
                 <th>Item</th>
@@ -73,7 +98,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody id="menu-table-body">
+        <tbody id="kota-table-body">
 
             <tr>
                 <td>Classic Kota</td>
@@ -83,6 +108,16 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                 <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
+    </td>
             </tr>
             <tr>
                 <td>Cheesy Kota</td>
@@ -92,6 +127,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Pork Special Kota</td>
@@ -101,6 +145,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Egg Kota</td>
@@ -110,6 +163,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Russian Kota</td>
@@ -119,9 +181,30 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
+        </tbody>
+    </table>
+     <table>
+        <h2>Chips</h2>
+        <thead>
             <tr>
-                <h2>Chips</h2>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="chips-table-body">
+             <tr>
                 <td>Small Chips</td>
                 <td>R15</td>
                 <td>Crispy salted chips, small portion</td>
@@ -129,6 +212,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Medium Chips</td>
@@ -138,6 +230,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Large Chips</td>
@@ -147,8 +248,31 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
+        </tbody>
+        </thead>
+    </table>
+    <table>
+        <h2>Drinks</h2>
+        <thead>
             <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="drinks-table-body">
+             <tr>
                 <td>Cooldrink Can</td>
                 <td>R20</td>
                 <td>Coke, Sprite, Fanta - your choice</td>
@@ -156,6 +280,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Juice</td>
@@ -165,6 +298,15 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
+
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
             </tr>
             <tr>
                 <td>Water</td>
@@ -174,10 +316,51 @@
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
-            </tr>
+                <td>
+                    <span class="available">Available</span>
+                 </td>
 
+                <td>
+                     <button class="stock-btn"
+                     onclick="toggleStock(this)">
+                        Mark Out of Stock
+                    </button>
+            </tr>
         </tbody>
-    </table>
+        </table>
+
+</div>
+<div class="sales-report">
+    <h1>Sales & Report</h1>
+    <div class="report-cards">
+        <div class="report-card">
+            <h3>Best-selling Item</h3>
+            <p id="best-item">-</p>
+        </div>
+        <div class="report-card">
+            <h3>Average Order Value</h3>
+            <p id="average-order">R0.00</p>
+        </div>
+        <div class="report-card">
+            <h3>Daily Sales</h3>
+            <p id="daily-sales">R0.00</p>
+        </div>
+
+        <div class="report-card">
+            <h3>Weekly Sales</h3>
+            <p id="weekly-sales">R0.00</p>
+        </div>
+
+        <div class="report-card">
+            <h3>Monthly Sales</h3>
+            <p id="monthly-sales">R0.00</p>
+        </div>
+        <div class="report-card">
+            <h3>Orders Completed</h3>
+            <p id="completed-orders">0</p>
+        </div>
+
+    </div>
 </div>
 
 </body>

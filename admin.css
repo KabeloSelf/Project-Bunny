@@ -133,6 +133,10 @@ nav ul {
 .menu-management h2{
     margin-bottom:20px;
 }
+.menu-management h2 header{
+    color:#e63946;
+    margin-bottom:20px;
+}
 .menu-form{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -145,6 +149,13 @@ nav ul {
     border:1px solid #333;
     border-radius:10px;
     color:white;
+}
+#item-image {
+    background: #0a0a0a;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px;
 }
 .add-btn{
     background: #e63946;
@@ -170,6 +181,28 @@ nav ul {
     border-radius:8px;
     cursor:pointer;
 }
+.available{
+  background:#4caf50;
+  color:white;
+  padding:6px 12px;
+  border-radius: 20px;
+  font-size:13px;
+}
+.out-of-stock{
+  background: #d32f2f;
+  color:white;
+  padding:6px 12px;
+  border-radius: 20px;
+  font-size:13px;
+}
+.stock-btn{
+  background:#e63946;
+  color:white;
+  border:none;
+  padding: 8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
 .menu-management th,.menu-management td{
     padding:15px;
     border-bottom:1px solid #222;
@@ -177,4 +210,78 @@ nav ul {
 }
 .menu-management th{
     color:#e63946;
+}
+.ready-orders{
+  background: #161616;
+  border:1px solid #222;
+  border-radius:14px;
+  padding:25px;
+  margin-top:30px;
+}
+.ready-orders h2{
+  color: #e63946;
+  margin-bottom:20px;
+  font-size:24px;
+}
+.ready-orders table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.ready-orders th{
+  text-align:left;
+  padding:15px;
+  color:#e63946;
+  border-bottom: 1px solid #333;
+  font-size:15px;
+}
+.ready-orders td{
+  padding:15px;
+  color:#333;
+  border-bottom: 1px solid #222;
+  font-size:14px;
+}
+.ready-orders tr:hover {
+  background: #1d1d1d;
+}
+.ready-orders .empty-state {
+  text-align: center;
+  color: #666;
+  padding: 30px;
+}
+.sales-reports {
+    background: #161616;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.sales-reports h2 {
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.report-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.report-card {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.report-card h3 {
+    color: #888;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.report-card p {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
 }
